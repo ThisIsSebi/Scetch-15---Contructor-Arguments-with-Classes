@@ -25,8 +25,8 @@ class Bubble {
       let d = dist(mouseX, mouseY, this.x, this.y);
       if(d < this.r){
         this.colourX = 0;
-        this.colourY = 255;
-        this.colourZ = 0;
+        this.colourY = 0;
+        this.colourZ = 255;
         switchOn = true;
       } else if(switchOn){
         this.colourX = 255;

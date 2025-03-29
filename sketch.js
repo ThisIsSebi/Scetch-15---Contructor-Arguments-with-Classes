@@ -4,12 +4,14 @@
 
 let bubble1;
 let bubble2;
+let square1;
 let switchOn = false;
 
 function setup() {
   createCanvas(600, 400);
   bubble1 = new Bubble(200, 200, 40, 255, 0, 0);
   bubble2 = new Bubble(400, 200, 20, 0, 255, 0);
+  square1 = new Square(400,300,50,50)
 }
 
 function draw() {
@@ -18,6 +20,8 @@ function draw() {
   bubble1.show();
   bubble2.move();
   bubble2.show();
+  square1.show();
+  square1.move();
 }
 
 function mousePressed() {
