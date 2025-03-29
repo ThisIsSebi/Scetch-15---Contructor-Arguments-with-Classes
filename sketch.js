@@ -7,8 +7,8 @@ let bubble2;
 
 function setup() {
   createCanvas(600, 400);
-  bubble1 = new Bubble(200,200,40);
-  bubble2 = new Bubble(400,200,20);
+  bubble1 = new Bubble(200,200,40, 255, 0,0);
+  bubble2 = new Bubble(400,200,20, 0, 255, 0);
 }
 
 function draw() {
@@ -20,10 +20,13 @@ function draw() {
 }
 
 class Bubble{
-  constructor(x,y,r){
+  constructor(x,y,r, colourX, colourY, colourZ){
     this.x = x;
     this.y = y;
     this.r = r;
+    this.colourX = colourX;
+    this.colourY = colourY;
+    this.colourZ = colourZ;
   }
 
   move(){
@@ -34,7 +37,7 @@ class Bubble{
   show(){
     stroke(255);
     strokeWeight(4);
-    noFill();
+    fill(this.colourX, this.colourY, this.colourZ);
     ellipse(this.x, this.y, this.r *2);
   }
 }
